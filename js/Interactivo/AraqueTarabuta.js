@@ -52,18 +52,18 @@ function myFunction() {
 
     if ((vid.currentTime >= 44.6) && (vid.currentTime <= 46.6)) {
         vid.pause();
-        document.getElementById('pregunta7').style.display = 'block';
-        
-    } else {
-        document.getElementById('pregunta7').style.display = 'none';
-    }
-
-    if ((vid.currentTime >= 63.9) && (vid.currentTime <= 65.5)) {
-        vid.pause();
         document.getElementById('pregunta3').style.display = 'block';
         
     } else {
         document.getElementById('pregunta3').style.display = 'none';
+    }
+
+    if ((vid.currentTime >= 63.9) && (vid.currentTime <= 65.5)) {
+        vid.pause();
+        document.getElementById('pregunta7').style.display = 'block';
+        
+    } else {
+        document.getElementById('pregunta7').style.display = 'none';
     }
 
     if ((vid.currentTime >= 82) && (vid.currentTime <= 84)) {
