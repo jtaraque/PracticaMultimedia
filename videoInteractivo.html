@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="css/video-js.css"> <!-- enlace a la libreria de JS de la carpeta -->
+	<!--este es el código al cual tiene que acceder -->
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos - copia.css">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/font.css.css">
+	<link rel="stylesheet" href="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.css">
+	<link rel="stylesheet" href="css/styleV.css">
+	<link rel="stylesheet" href="css/Interactivo/AraqueTarabuta.css">
+	<script src="js/jquery.min.js"></script>
+	<link rel="icon" type="image/png" href="images/LOGO.png" sizes="32x32">
+
+	<title>Video Interactivo</title>
+</head>
+
+<body>
+	<header>
+		<h1 class="titulo">Proyecto Multimedia</h1>
+		<div id="menu">
+			<ul style="padding-bottom: 12px;padding-top: 12px;">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="Aboutme.html">Sobre el proyecto</a></li>
+
+			</ul>
+		</div>
+	</header>
+
+
+	<main class="site-content" style="border-top-style: solid; border-top-width:0px; margin-top:190px">
+		<figure id="video_player1">
+			<div class="container">
+				<video id="VideoInteractivo" width=100% controls>
+					<source src="VIDEO MULTIMEDIA/VIDEOMULTIMEDIA.mp4" type="video/mp4">
+				</video>
+
+				<p style="display:none;">Playback position: <span id="tiempo"></span></p>
+
+
+				<div class="overlay" id="InitialText">
+					<h4 class="titulo">TU DECIDES TU DESTINO, DISFRUTA DEL CAMINO</h4>
+				</div>
+
+				<div class="overlay" id="GraduacionText">
+					<h4 class="titulo">POR EXTRAÑO QUE PAREZCA,
+					<h4 class="tituloBajo">¡HAS SIDO CAPAZ DE GRADUARTE!</h4>
+						
+					</h4>
+				</div>
+
+				<div class="overlay" id="DiedText">
+					<h4 class="titulo">HASTA AQUÍ TU HISTORIA, ¡DEMASIADA FIESTA!</h4>
+				</div>
+
+				<div class="overlay" id="LigarText">
+					<h4 class="titulo">ESTÁ CLARO A LO QUE VENIAS A LA UNIVERSIDAD,</h4>
+					<h4 class="tituloBajo">¡BUENA HISTORIA!</h4>
+				</div>
+
+				<!-- Primera pregunta -->
+                <div class="overlay" id="pregunta2" name="pregunta2">
+					<h4 style="margin-top: 18px;">¿Cuál será tu primera decisión?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">Ir de fiesta</a><br>
+					<a href="#" class="button longBtns opcionEstudiar">Ir a clase</a><br>
+                    <a href="#" class="button longBtns opcionMaletas">Deshacer la maleta</a>
+
+				</div>
+				<!-- Despues de deshacer maletas -->
+                <div class="overlay" id="pregunta3" name="pregunta3">
+					<h4 style="margin-top: 18px;">¿Qué harás a continuación?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">Ir de fiesta</a>
+					<a href="#" class="button longBtns opcionEstudiar">Ir a clase</a>
+					<a href="#" class="button longBtns opcionPoesia">Clase extraescolar: Poesia</a>
+
+				</div>
+				<!-- despues de ir a poesía (se desbloquea ligar)-->
+                <div class="overlay" id="pregunta4" name="pregunta4">
+					<h4 style="margin-top: 18px;">¿Qué harás a continuación?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">Ir de fiesta</a>
+					<a href="#" class="button longBtns opcionEstudiar">Estudiar</a>
+					<a href="#" class="button longBtns opcionRugby">Clase extraescolar: Rugby</a>
+					<a href="#" class="button longBtns opcionLigar">Ligar</a>
+
+
+				</div>
+				<!-- despues de ir a rugby -->
+				<div class="overlay" id="pregunta5" name="pregunta5">
+					<h4 style="margin-top: 18px;">¿Qué harás a continuación?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">Ir de fiesta</a>
+					<a href="#" class="button longBtns opcionEstudiar">Estudiar</a>
+					<a href="#" class="button longBtns opcionLigar">Ligar</a>
+
+				</div>
+
+				<!-- despues de ligar la primera vez -->
+				<div class="overlay" id="pregunta6" name="pregunta6">
+					<h4 style="margin-top: 18px;">¿Qué harás a continuación?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">Ir de fiesta</a>
+					<a href="#" class="button longBtns opcionEstudiar">Estudiar</a>
+					<a href="#" class="button longBtns opcionLigar">Seguir ligando</a>
+
+				</div>
+				<!-- despues de la primera clase -->
+				<div class="overlay" id="pregunta7" name="pregunta7">
+					<h4 style="margin-top: 18px;">¿Qué harás a continuación?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">Ir de fiesta</a>
+					<a href="#" class="button longBtns opcionEstudiar">Estudiar</a>
+					<a href="#" class="button longBtns opcionRugby">Clase extraescolar: Rugby</a>
+
+				</div>
+
+				<!-- despues de la segunda clase -->
+				<div class="overlay" id="pregunta8" name="pregunta8">
+					<h4 style="margin-top: 18px;">¿Qué harás a continuación?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">Ir de fiesta</a>
+					<a href="#" class="button longBtns opcionEstudiar">Estudiar</a>
+
+				</div>
+
+				<!-- despues de la tercera clase (aviso de examen) -->
+				<div class="overlay" id="pregunta9" name="pregunta9">
+					<h4 style="margin-top: 18px;">Hay examen sorpresa y no has estudiado, ¿que harás?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">Me voy corriendo que esta noche se sale</a>
+					<a href="#" class="button longBtns opcionEstudiar">Me quedo y pruebo suerte</a>
+
+				</div>
+				<!-- despues de primera fiesta -->
+				<div class="overlay" id="pregunta11" name="pregunta11">
+					<h4 style="margin-top: 18px;">¿Qué harás a continuación?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">Seguir de fiesta</a>
+					<a href="#" class="button longBtns opcionEstudiar">Ir a clase</a>
+
+				</div>
+				<!-- despues de segunda fiesta -->
+				<div class="overlay" id="pregunta12" name="pregunta12">
+					<h4 style="margin-top: 18px;">¿Qué harás a continuación?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">¡¡Más fiesta!!</a>
+					<a href="#" class="button longBtns opcionEstudiar">Ir a clase</a>
+
+				</div>
+				<!-- despues de tercera fiesta -->
+				<div class="overlay" id="pregunta13" name="pregunta13">
+					<h4 style="margin-top: 18px;">¿Qué harás a continuación?</h4>
+					<br>
+					<a href="#" class="button longBtns opcionFiesta">Mega fiesta final</a>
+					<a href="#" class="button longBtns opcionEstudiar">Ir a clase</a>
+
+				</div>
+
+				
+
+				<form class="overlay" id="pregunta1" name="pregunta1">
+					<span class="boton" onclick="cerrarPregunta1('pregunta1')">x</span>
+					<h4 style="margin-top: 20px;">Veamos si has prestado atención..</h4>
+					<p style="margin-top: 10px; margin-bottom: 10px;">¿Que objeto se ha repetido?
+					</p>
+
+					<input id="Reposa" type="radio" name="test1" value="Reposa culos"> "Reposa culos"
+					<input id="Esponja" type="radio" name="test1" value="Esponjas"> Esponjas
+					<input id="Chism" type="radio" name="test1" value="Chisme"> "El chisme" <br>
+
+
+					<input id="button" type="button" value="Comprobar" onclick="comprobarMaletas()"> <br>
+
+					<div id="after_submit"></div>
+					<p id="messages"></p>
+
+				</form>
+
+				<form class="overlay" id="pregunta10" name="pregunta10">
+					<span class="boton" onclick="cerrarPregunta10('pregunta10')">x</span>
+					<h4 style="margin-top: 20px;">Veamos si has prestado atención..</h4>
+					<p style="margin-top: 10px; margin-bottom: 10px;">¿De que asignatura era el examen?
+					</p>
+
+					<input id="Fisic" type="radio" name="test2" value="Fisica"> Fisica
+					<input id="Quimic" type="radio" name="test2" value="Quimica"> Quimica
+					<input id="Biologi" type="radio" name="test2" value="Biologia"> Biologia <br>
+
+
+					<input id="button" type="button" value="Comprobar" onclick="comprobarAsignaturas()"> <br>
+
+					<div id="after_submit2"></div>
+					<p id="messages2"></p>
+
+				</form>
+
+
+				<form class="overlay" id="pregunta14" name="pregunta14">
+					<span class="boton" onclick="cerrarPregunta14('pregunta14')">x</span>
+					<h4 style="margin-top: 18px;"style="margin-top: 1px;">¿Cuantos festivales conoces? Cita 3.</h4>
+
+					<p style="margin-top: 10px;"> 
+						1. <input id="textbox1" type="text" name="input1"><br>
+						2. <input id="textbox2" type="text" name="input2"> <br>
+						3. <input id="textbox3" type="text" name="input3"></p>
+
+					<input id="button" type="button" value="Aceptar" onclick="cerrarPregunta14('pregunta14')"> <br>
+
+					<div id="after_submit"></div>
+					<p id="messages1"></p>
+				</form>
+
+			</div>
+
+			<br>
+			<div class="center">
+				
+
+	</main>
+
+
+</body>
+<footer class="content-footer">
+	<p class="sobreMi"> © Andreea Tarabuta & Juan Tomás Araque Martínez  | 2021 </p>
+	<a href="https://esi.uclm.es"><img class="logoESI" src="images/logoESI.png" width="80" height="50"></a>
+	&nbsp; &nbsp; &nbsp;
+
+	<a href="https://www.uclm.es"><img class="logoUCLM" src="images/logoUCLM.png" width="50" height="50"></a>
+</footer>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js"
+	integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+<script src="js/Interactivo/AraqueTarabuta.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/funcionalidad.js"></script>
+
+</html>
